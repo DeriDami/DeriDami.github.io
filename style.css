@@ -1,0 +1,132 @@
+:root{
+    --margin-text: 10px 0;
+    --back-color: rgb(88, 89, 99);
+    --first-color: rgb(162, 164, 189);
+    --top-color: rgb(57, 58, 65);
+}
+
+body{
+    background-color: var(--back-color);
+    color: var(--first-color);
+    font-family: Montserrat;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h3, p{
+    margin: var(--margin-text);
+}
+
+ h1,  h3{
+    font-weight: 400;
+    padding: 4px 4px; 
+}
+
+h3{
+    border: .5px solid var(--first-color);
+    display: inline-block;
+}
+
+#TOP{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.stiletop{
+    background-color: var(--top-color);
+    box-shadow: 0px 0px 10px var(--first-color);
+}
+
+
+.stiletop h1, .stiletop a{
+    margin: 0;
+    text-align: center;
+    padding: 8px 0px;
+}
+
+#CONTENT, #content{
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 12px;
+}
+
+hr{
+    border: 1px solid var(--first-color);    
+}
+
+form{
+    width: 100%;
+}
+
+textarea{
+    background-color: var(--top-color);
+    color: var(--first-color);
+    resize:none;
+    font-family: Montserrat;
+    font-size: 1em;
+    line-height: 1.5;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    margin: 20px 0;;
+    box-sizing:border-box;
+}
+
+a{
+    color: var(--first-color);
+}
+
+button a:hover{
+    color: var(--top-color);
+}
+
+textarea:focus{
+outline:none;
+}
+
+input[type="submit"], button{
+    background-color: var(--top-color);
+    color: var(--first-color);
+    border: none;
+    padding: 8px 16px;
+    font-family: Montserrat;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom:10px;
+}
+
+input[type="submit"]:hover, button:hover{
+    background-color: var(--first-color);
+    color: var(--top-color);
+}
+
+a{
+    text-decoration:none;
+}
+
+@media print {
+    /* Hide elements that are not needed in the print version */
+    #resetBtn{
+        display: none;
+    }
+
+    /* Change colors to grayscale for better printing */
+    body {
+        color: black;
+        background: white;
+    }
+
+    /* Change font sizes */
+    .stiletop a h1 {
+        font-size: 14pt;
+    }
+
+    /* Add page breaks */
+    .page-break {
+        page-break-after: always;
+    }
+}
+
+
