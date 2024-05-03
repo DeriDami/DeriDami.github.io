@@ -52,6 +52,12 @@ h3{
     padding: 0 12px;
 }
 
+#content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 hr{
     border: 1px solid var(--first-color);    
 }
@@ -108,7 +114,7 @@ a{
 
 @media print {
     /* Hide elements that are not needed in the print version */
-    #resetBtn{
+    #resetBtn, #printBtn{
         display: none;
     }
 

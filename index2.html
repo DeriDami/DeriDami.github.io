@@ -24,7 +24,7 @@
 
     <div id="content"></div>
 
-    <div id="content"><button id="resetBtn">Reset</button></div>
+    <div id="content"><button id="resetBtn">Reset</button> <button id="printBtn">Print this page</button></div>
     <script>
         window.onload = function () {
             var storedInput = JSON.parse(localStorage.getItem('userInput')); // retrieve the stored input
@@ -47,8 +47,11 @@
         }
 
         document.getElementById('resetBtn').addEventListener('click', resetContent);
+        document.getElementById('printBtn').addEventListener('click', function () {
+            window.print();
+        });
 
-        
+
     </script>
 
 
