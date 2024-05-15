@@ -71,6 +71,13 @@
 
 
                 <br>
+
+                <audio controls loop>
+                    <source src="stufetta.mp3" type="audio/mpeg">
+                </audio>
+
+
+                <br>
                 <textarea class="userInput" name="vulnerabile" placeholder="Navigare nelle memorie"
                     rows="10"></textarea>
                 <input class="submitBtn" type="submit" value="Submit">
@@ -94,6 +101,10 @@
                 </p>
 
 
+                <br>
+                <audio controls loop>
+                    <source src="clock.mp3" type="audio/mpeg">
+                </audio>
                 <br>
                 <textarea class="userInput" name="vulnerabile" placeholder="se fossi..." rows="10"></textarea>
                 <input class="submitBtn" type="submit" value="Submit">
@@ -229,17 +240,17 @@
 
     <script>
         var submitButtons = document.getElementsByClassName('submitBtn');
-for (var i = 0; i < submitButtons.length; i++) {
-    (function(i) {
-        submitButtons[i].addEventListener('click', function(event) {
-            event.preventDefault(); // prevent the form from submitting
-            var userInput = document.getElementsByClassName('userInput')[i].value;
-            var existingInputs = JSON.parse(localStorage.getItem('userInput')) || [];
-            existingInputs.push(userInput);
-            localStorage.setItem('userInput', JSON.stringify(existingInputs)); // store all user inputs in local storage
-        });
-    })(i);
-}
+        for (var i = 0; i < submitButtons.length; i++) {
+            (function (i) {
+                submitButtons[i].addEventListener('click', function (event) {
+                    event.preventDefault(); // prevent the form from submitting
+                    var userInput = document.getElementsByClassName('userInput')[i].value;
+                    var existingInputs = JSON.parse(localStorage.getItem('userInput')) || [];
+                    existingInputs.push(userInput);
+                    localStorage.setItem('userInput', JSON.stringify(existingInputs)); // store all user inputs in local storage
+                });
+            })(i);
+        }
     </script>
 </body>
 

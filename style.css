@@ -112,6 +112,8 @@ a{
     text-decoration:none;
 }
 
+
+
 @media print {
     /* Hide elements that are not needed in the print version */
     #resetBtn, #printBtn{
