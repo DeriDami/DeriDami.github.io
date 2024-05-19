@@ -33,6 +33,7 @@ h3{
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000;
 }
 .stiletop{
     background-color: var(--top-color);
@@ -110,6 +111,10 @@ input[type="submit"]:hover, button:hover{
 
 a{
     text-decoration:none;
+}
+
+audio, .audio{
+    z-index:-1;
 }
 
 

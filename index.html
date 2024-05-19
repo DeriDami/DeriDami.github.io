@@ -102,7 +102,7 @@
 
 
                 <br>
-                <audio controls loop>
+                <audio class="audio" controls loop>
                     <source src="clock.mp3" type="audio/mpeg">
                 </audio>
                 <br>
@@ -118,8 +118,10 @@
                     Cosa ti ha spinto a comportarti in quel modo? Cosa ti ha spinto a dire quelle parole?
                 </p>
 
-
-
+                <br>
+                <audio controls loop>
+                    <source src="3a richiesta.wav" type="audio/mpeg">
+                </audio>
                 <br>
                 <textarea class="userInput" name="vulnerabile" placeholder="le motivazioni..." rows="10"></textarea>
                 <input class="submitBtn" type="submit" value="Submit">
@@ -135,7 +137,10 @@
                     le prossime domande quindi cerca di rispondere nel modo più onesto e descrittivo possibile.
                 </p>
 
-
+                <br>
+                <audio controls loop>
+                    <source src="4a domanda.wav" type="audio/mpeg">
+                </audio>
                 <br>
                 <textarea class="userInput" name="vulnerabile" placeholder="Le tue sensazioni" rows="10"></textarea>
                 <input class="submitBtn" type="submit" value="Submit">
@@ -154,6 +159,10 @@
                 </p>
 
 
+                <br>
+                <audio controls loop>
+                    <source src="whisperers.wav" type="audio/mpeg">
+                </audio>
                 <br>
                 <textarea class="userInput" name="vulnerabile" placeholder="Cosa accadrebbe se..." rows="10"></textarea>
                 <input class="submitBtn" type="submit" value="Submit">
@@ -186,6 +195,10 @@
 
 
                 <br>
+                <audio class="audio" controls loop>
+                    <source src="gong.wav" type="audio/mpeg">
+                </audio>
+                <br>
                 <textarea class="userInput" name="vulnerabile" placeholder="...tu fossi soggetto al giudizio altrui"
                     rows="10"></textarea>
                 <input class="submitBtn" type="submit" value="Submit">
@@ -202,8 +215,6 @@
 
 
                 <br>
-
-
                 <h3>...TU POTESSI SENTIRE</h3>
                 <p>Qui sarà necessario un esercizio di fantasia. Immagina per un momento che tu possa sentire e provare
                     le stesse
@@ -213,7 +224,11 @@
                     pensiero su di loro cambi?
                 </p>
 
-
+                <br>
+                <audio controls loop>
+                    <source src="forest.mp3" type="audio/mpeg">
+                </audio>
+                
 
 
                 <br>
@@ -250,6 +265,13 @@
                     localStorage.setItem('userInput', JSON.stringify(existingInputs)); // store all user inputs in local storage
                 });
             })(i);
+        }
+
+
+        var audioElements = document.getElementsByClassName('audio');
+
+        for (var i = 0; i < audioElements.length; i++) {
+            audioElements[i].volume = 0.2;
         }
     </script>
 </body>
