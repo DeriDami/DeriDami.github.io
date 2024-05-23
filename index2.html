@@ -22,9 +22,14 @@
         </div>
     </div>
 
-    <div id="content"></div>
+    <div id="content1"></div>
 
-    <div id="content"><button id="resetBtn">Reset</button> <button id="printBtn">Print this page</button></div>
+    <div id="content">
+        <button id="resetBtn">Reset</button> 
+        <button id="printBtn">Print this page</button>
+    </div>
+
+
     <script>
         window.onload = function () {
             var storedInput = JSON.parse(localStorage.getItem('userInput')); // retrieve the stored input
@@ -33,16 +38,16 @@
                     var newDiv = document.createElement('div');
                     newDiv.textContent = storedInput[i];
                     newDiv.style.backgroundColor = 'var(--top-color)'; // add a border to the div
-                    newDiv.style.margin = '10px 0px'; // add some margin
+                    newDiv.style.margin = '60px 0px'; // add some margin
                     newDiv.style.padding = '10px'; // add some padding
                     newDiv.style.wordWrap = 'break-word';
-                    document.getElementById('content').appendChild(newDiv); // append the new div to the content div
+                    document.getElementById('content1').appendChild(newDiv); // append the new div to the content div
                 }
             }
         };
 
         function resetContent() {
-            document.getElementById('content').innerHTML = ""; // clear the content div
+            document.getElementById('content1').innerHTML = ""; // clear the content div
             localStorage.removeItem('userInput'); // clear the stored user input
         }
 
