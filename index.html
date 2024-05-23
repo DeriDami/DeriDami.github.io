@@ -43,6 +43,11 @@
                 abbastanza aperto o aperta a voler esplorare parti di te che forse non hai mai considerato, questa
                 attività
                 potrebbe scatenare un processo di riflessione.
+                <br>
+                <br>
+                Per contribuire alla tua concentrazione è possibile riprodurre i suoni messi a disposizione, ne troverai uno
+                per ciascuna domanda e potrai scegliere tu se riprodurli e quando. ricorda solo di non modificare il volume in quanto è 
+                già stato regolato.
             </p>
         </div>
         <br>
@@ -102,8 +107,8 @@
 
 
                 <br>
-                <audio controls loop>
-                    <source src="clock.wav" type="audio/mpeg">
+                <audio class="audio" controls loop>
+                    <source src="clock.mp3" type="audio/mpeg">
                 </audio>
                 <br>
                 <textarea class="userInput" name="vulnerabile" placeholder="se fossi..." rows="10"></textarea>
@@ -119,7 +124,7 @@
                 </p>
 
                 <br>
-                <audio controls loop>
+                <audio class="audio2" controls loop>
                     <source src="3a richiesta.wav" type="audio/mpeg">
                 </audio>
                 <br>
@@ -160,7 +165,7 @@
 
 
                 <br>
-                <audio controls loop>
+                <audio class="audio1" controls loop>
                     <source src="whisperers.wav" type="audio/mpeg">
                 </audio>
                 <br>
@@ -195,7 +200,7 @@
 
 
                 <br>
-                <audio controls loop>
+                <audio class="audio" controls loop>
                     <source src="gong.wav" type="audio/mpeg">
                 </audio>
                 <br>
@@ -225,7 +230,7 @@
                 </p>
 
                 <br>
-                <audio controls loop>
+                <audio class="audio2" controls loop>
                     <source src="forest.mp3" type="audio/mpeg">
                 </audio>
                 
@@ -272,6 +277,18 @@
 
         for (var i = 0; i < audioElements.length; i++) {
             audioElements[i].volume = 0.2;
+        }
+
+        var audioElements = document.getElementsByClassName('audio1');
+
+        for (var i = 0; i < audioElements.length; i++) {
+            audioElements[i].volume = 0.03;
+        }
+
+        var audioElements = document.getElementsByClassName('audio2');
+
+        for (var i = 0; i < audioElements.length; i++) {
+            audioElements[i].volume = 0.3;
         }
     </script>
 </body>
