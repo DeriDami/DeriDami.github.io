@@ -45,8 +45,10 @@
                 potrebbe scatenare un processo di riflessione.
                 <br>
                 <br>
-                Per contribuire alla tua concentrazione è possibile riprodurre i suoni messi a disposizione, ne troverai uno
-                per ciascuna domanda e potrai scegliere tu se riprodurli e quando. ricorda solo di non modificare il volume in quanto è 
+                Per contribuire alla tua concentrazione è possibile riprodurre i suoni messi a disposizione, ne troverai
+                uno
+                per ciascuna domanda e potrai scegliere tu se riprodurli e quando. ricorda solo di non modificare il
+                volume in quanto è
                 già stato regolato.
             </p>
         </div>
@@ -233,7 +235,7 @@
                 <audio class="audio2" controls loop preload="auto">
                     <source src="forest.mp3" type="audio/mpeg">
                 </audio>
-                
+
 
 
                 <br>
@@ -245,7 +247,8 @@
                 <p>Siamo giunti al termine di questo viaggio, probabilmente non molto piacevole, ti lascio alle tue
                     riflessioni nella speranza di aver instillato
                     in te un po' di consapevolezza riguardo questo tema. Sentiti libero di rivedere le tue risposte e
-                    magari anche di salvarle se preferisci. <br>
+                    magari anche di salvarle se preferisci.
+                    <br>
                     Ti auguro tutto il meglio e ti ringrazio di aver fatto questo percorso insieme a me.
                 </p>
                 <br>
@@ -268,6 +271,12 @@
                     var existingInputs = JSON.parse(localStorage.getItem('userInput')) || [];
                     existingInputs.push(userInput);
                     localStorage.setItem('userInput', JSON.stringify(existingInputs)); // store all user inputs in local storage
+
+
+                    var audioElements = document.getElementsByTagName('audio');
+                    for (var j = 0; j < audioElements.length; j++) {
+                        audioElements[j].pause();
+                    }
                 });
             })(i);
         }

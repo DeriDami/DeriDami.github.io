@@ -44,6 +44,8 @@
                     document.getElementById('content1').appendChild(newDiv); // append the new div to the content div
                 }
             }
+
+            localStorage.removeItem('userInput'); // clear the stored user input
         };
 
         function resetContent() {
